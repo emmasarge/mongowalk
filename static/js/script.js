@@ -23,3 +23,8 @@ $(document).ready(function(){
         }
     });
   });
+  // ADD TASK SELECTOR
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
