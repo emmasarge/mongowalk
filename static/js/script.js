@@ -11,3 +11,15 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.tooltipped').tooltip();
   });
+
+// CALENDAR FOR ADD TASK PAGE
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
+        format: "dd mmmm, yyyy",
+        yearRange: 3,
+        showClearButton: true,
+        i18n: {
+            done: "Select"
+        }
+    });
+  });
