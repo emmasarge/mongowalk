@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Register</h3>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2">
+        <div class="card-panel">
+            <!--username-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix orange-text text-darken-4">mode_edit</i>
+                    <textarea id="username" name="username" class="materialize-textarea"></textarea>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!--password-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix orange-text text-darken-4">lock_outline</i>
+                    <input id="password" type="password" name="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!--register-->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large deep-orange darken-4">
+                    Register
+                    <i class="material-icons prefix">star_outline</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}
