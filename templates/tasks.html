@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>I am extending the base template</h2>
 
+<ul class="collapsible">
     {% for task in tasks %}
-        {{ task.task_name }}<br>
-        {{ task.category_name }}<br>
-        {{ task.task_description }}<br>
-        {{ task.is_urgent }}<br>
-        {{ task.due_date }}<br>
+    <li>
+        <div class="collapsible-header white-text deep-orange darken-1 text-shadow"><i class="material-icons">keyboard_arrow_down</i>
+            <strong>
+                {{ task.task_name }} </strong> :   {{ task.due_date }}  
+                {% if task.is_urgent == "on" %}
+                 <i class="material-icons tooltipped" 
+                 data-position="right" data-tooltip="URGENT!">announcement</i>
+                {% endif %}
+            
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ task.category_name }}</strong>
+            <p>{{ task.task_description }}</p>
+        </div>
+    </li>
     {% endfor %}
+</ul>
 
 {% endblock %}
