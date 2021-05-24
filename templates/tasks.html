@@ -6,14 +6,19 @@
 <ul class="collapsible">
     {% for task in tasks %}
     <li>
-        <div class="collapsible-header white-text deep-orange darken-1 text-shadow"><i class="material-icons">keyboard_arrow_down</i>
-            <strong>
-                {{ task.task_name }} </strong> :   {{ task.due_date }}  
+        <div class="collapsible-header white-text deep-orange darken-1 text-shadow">
+            <div class="col s3">
+                <i class="material-icons">keyboard_arrow_down</i>
+                <a class="waves-effect waves-light btn-small deep-orange lighten-3">Done</a>
+                <a class="waves-effect waves-light btn-small deep-orange lighten-2">Edit</a>
+            </div>
+            <div class="col s9">
+                <strong>
+                    {{ task.task_name }} </strong> : {{ task.due_date }}
                 {% if task.is_urgent == "on" %}
-                 <i class="material-icons tooltipped" 
-                 data-position="right" data-tooltip="URGENT!">announcement</i>
+                <i class="material-icons tooltipped" data-position="right" data-tooltip="URGENT!">announcement</i>
                 {% endif %}
-            
+            </div>
         </div>
         <div class="collapsible-body">
             <strong>{{ task.category_name }}</strong>
